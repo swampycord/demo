@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog">
+
+	<changeSet id="1" author="bryan">
+		<preConditions>
+			<not>
+				<tableExists tableName="USER_" />
+			</not>
+		</preConditions>
+		<createTable tableName="USER_">
+			<column name="ID_" type="BIGINT" />
+			<column name="NAME_" type="VARCHAR(1000)" />
+			<column name="ROLE_" type="VARCHAR(1000)" />
+		</createTable>
+	</changeSet>
+</databaseChangeLog>
